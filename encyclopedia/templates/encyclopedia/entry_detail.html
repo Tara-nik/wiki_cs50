@@ -1,0 +1,17 @@
+{% extends 'encyclopedia/layout.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ title }}</h1>
+    <div>{{ content|safe }}</div>
+    <div>
+        <button class="btn btn-outline-warning"><a href="{% url 'edit' title=title %}">Edit This Post</a></button>
+    
+        <button class="btn btn-outline-secondary"><a href="{% url 'index' %}">Back to Home</a></button>
+    </div>
+{% endblock %}
+
+
